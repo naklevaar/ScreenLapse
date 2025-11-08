@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header: Date & Select -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/date_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stats for: May 4"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+            <Button
+                android:id="@+id/select_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/total_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Screen Time: 0.00 mins"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Weekly toggle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Mode"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+            <Switch
+                android:id="@+id/weekly_mode_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Daily Chart inside MaterialCardView with scroll -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="4dp"
+            android:radius="16dp"
+            android:backgroundTint="@android:color/white"
+            android:padding="12dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bar_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:minWidth="600dp" />
+            </HorizontalScrollView>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Weekly Chart inside MaterialCardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardElevation="4dp"
+            android:radius="16dp"
+            android:backgroundTint="@android:color/white"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:id="@+id/weekly_card">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/weekly_chart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh Stats"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/export_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Export Stats"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Stats"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/view_weekly_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Weekly Chart"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

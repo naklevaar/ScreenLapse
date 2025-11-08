@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/kid_name_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter kid name"
+    android:inputType="textPersonName"
+    android:padding="12dp"
+    android:background="@drawable/rounded_edittext" />

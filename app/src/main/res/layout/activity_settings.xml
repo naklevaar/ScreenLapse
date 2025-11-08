@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Apps"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Border Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#CCCCCC" /> <!-- Soft grey -->
+
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/Widget.App.SetTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="center" />
+
+
+    <Button
+        android:id="@+id/bug_report_button"
+        style="@style/Widget.App.PrivacyPolicyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report a Bug"
+        android:layout_marginTop="16dp" />
+
+
+    <Button
+        android:id="@+id/stats_button"
+        style="@style/Widget.App.PickAppsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Stats"
+        android:layout_gravity="center" />
+
+</LinearLayout>

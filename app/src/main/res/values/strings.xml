@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ScreenLapse</string>
+    <string name="accessibility_description">Used for detecting locked apps to trigger lock screen</string>
+    <string name="accessibility_service_description">Required for ScreenTimeController to detect foreground apps and block access when time expires.</string>
+</resources>

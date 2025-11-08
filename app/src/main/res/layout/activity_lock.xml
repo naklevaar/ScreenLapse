@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lockRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/lockMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time's up"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="24dp" />
+</FrameLayout>

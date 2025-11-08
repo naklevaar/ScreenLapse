@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report a Bug"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Name (Optional)"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext" />
+
+    <EditText
+        android:id="@+id/bug_input"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Describe the issue here..."
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Report"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

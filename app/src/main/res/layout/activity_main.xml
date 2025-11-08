@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="24dp">
+
+    <!-- Help Button (Top Left) -->
+    <Button
+        android:id="@+id/help_button"
+        style="@style/Widget.App.FilledSupportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Info Icon (Top Right) -->
+    <ImageButton
+        android:id="@+id/info_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circle_border"
+        android:src="@drawable/ic_note"
+        android:scaleType="centerInside"
+        android:contentDescription="Info" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Parent!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_below="@id/help_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Main Buttons -->
+    <LinearLayout
+        android:id="@+id/button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_text"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pick_apps_button"
+            style="@style/Widget.App.PickAppsButton"
+            app:icon="@drawable/ic_play_circle"
+            app:iconPadding="24dp"
+            app:iconGravity="textStart"
+            android:text="Pick Apps to Monitor"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/set_timer_button"
+            style="@style/Widget.App.SetTimeButton"
+            app:icon="@drawable/ic_timer"
+            android:text="Set Time Limit"
+            app:iconPadding="24dp"
+            app:iconGravity="textStart"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_stats_button"
+            style="@style/Widget.App.ViewStatsButton"
+            app:icon="@drawable/ic_bar_chart"
+            android:text="View Stats"
+            app:iconPadding="12dp"
+            app:iconGravity="textStart"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/switch_profile_button"
+            style="@style/Widget.App.SwitchProfileButton"
+            app:icon="@drawable/ic_person"
+            android:text="Switch Profile"
+            app:iconPadding="24dp"
+            app:iconGravity="textStart"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/privacy_policy_button"
+            style="@style/Widget.App.PrivacyPolicyButton"
+            app:icon="@drawable/ic_policy"
+            android:text="Privacy Policy"
+            app:iconPadding="12dp"
+            app:iconGravity="textStart"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Support Section -->
+    <LinearLayout
+        android:id="@+id/support_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/supportText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Enjoying ScreenLapse? Buy us a coffee to keep it running and add new features! ☕"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/supportButton"
+            style="@style/Widget.App.FilledSupportButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Support ScreenLapse ☕" />
+
+        <TextView
+            android:id="@+id/thankYouText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>
