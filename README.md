@@ -44,6 +44,9 @@ Connect your physical Android device.
 Select the device in the target selector and click the Run button.
 Important: The app will prompt you to grant Accessibility Service Permission on first run. This step is mandatory for the app's core functionality.
 
+###OR
+You can simply download the release version.
+
 
 📱 App Demonstration
 <img width="512" height="512" alt="ic_launcher-playstore" src="https://github.com/user-attachments/assets/b6d1fd24-1805-405c-a899-2b27ce918b52" />
@@ -57,3 +60,5 @@ I faced a significant hurdle with the Google Play Store's new "closed testing" r
 Rather than abandoning the project, I chose to showcase my complete work and full source code here on GitHub.
 This demonstrates my ability to not only write complex Android code but also to navigate real-world distribution challenges.
 Developed by: [Affan Qureshi] - Third Year BCA Student
+Email : affanahmadq10@gmail.com
+
